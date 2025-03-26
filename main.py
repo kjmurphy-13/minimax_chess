@@ -11,7 +11,6 @@ def main():
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
     pygame.display.set_caption("Megan's Chess Practice")
 
-    # For one-letter representation, a standard system font works fine.
     piece_font = pygame.font.SysFont("Segoe UI Symbol", 48)
     clock = pygame.time.Clock()
 

@@ -20,10 +20,6 @@ class Button:
     def is_clicked(self, event):
         return event.type == pygame.MOUSEBUTTONDOWN and self.rect.collidepoint(event.pos)
 
-
-# --------------------------
-# Main Menu Function
-# --------------------------
 def main_menu(screen):
     menu_font = pygame.font.SysFont("Arial", 32)
     title_font = pygame.font.SysFont("Arial", 48)

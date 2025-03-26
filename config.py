@@ -1,21 +1,18 @@
 import chess
 
-# Constants
 WIDTH, HEIGHT = 640, 640
 SQ_SIZE = WIDTH // 8
 FPS = 60
 
-# App colors
 WHITE_SQ = (232, 235, 239)
 BLACK_SQ = (125, 135, 150)
-HIGHLIGHT_COLOR = (106, 246, 113, 120)  # semi-transparent green
-DANGER_COLOR = (246, 106, 106, 120)  # semi-transparent red
+HIGHLIGHT_COLOR = (106, 246, 113, 120)
+DANGER_COLOR = (246, 106, 106, 120)
 ARROW_COLOR = (50, 50, 255)
 BUTTON_COLOR = (70, 130, 180)
 BUTTON_HOVER = (100, 160, 210)
 TEXT_COLOR = (255, 255, 255)
 
-# Chess piece Unicode representations
 PIECE_UNICODE = {
     chess.Piece(chess.PAWN, chess.WHITE): "♙",
     chess.Piece(chess.KNIGHT, chess.WHITE): "♘",
@@ -31,7 +28,6 @@ PIECE_UNICODE = {
     chess.Piece(chess.KING, chess.BLACK): "♚",
 }
 
-# Standard chess piece square tables
 pawn_table = [
       0,   0,   0,   0,   0,   0,   0,   0,
      50,  50,  50,  50,  50,  50,  50,  50,

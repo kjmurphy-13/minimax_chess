@@ -7,7 +7,6 @@ def minimax(board: chess.Board, depth, alpha, beta, maximizing, start_time, time
     if visited is None:
         visited = set()
     board_fen = board.fen()
-    # If this board has been seen before in this branch, apply a heavy penalty.
     if board_fen in visited:
         penalty = 100
         return (evaluate_board(board) - penalty if maximizing else evaluate_board(board) + penalty), None
@@ -17,7 +16,6 @@ def minimax(board: chess.Board, depth, alpha, beta, maximizing, start_time, time
     if time.time() - start_time > time_limit:
         return evaluate_board(board), None
 
-    # Add current position to visited set for cycle detection.
     visited = visited.copy()
     visited.add(board_fen)
 

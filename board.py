@@ -13,7 +13,7 @@ def evaluate_board(board: chess.Board):
     development_score = 0
     center_control_score = 0
     mobility_score = 0
-    positional_score = 0  # New score from piece-square tables
+    positional_score = 0
 
     piece_values = {
         chess.PAWN: 100,
@@ -32,7 +32,6 @@ def evaluate_board(board: chess.Board):
         for piece_type, value in piece_values.items():
             pieces = board.pieces(piece_type, color)
             material_score += sign * value * len(pieces)
-            # Add piece-square table bonus for each piece.
             table = piece_square_tables[piece_type]
             for square in pieces:
                 index = square if color == chess.WHITE else 63 - square
